@@ -19,28 +19,18 @@
             if(request.getParameter("txtUsuario")==null)
             {
         %>
-        <div id="contenedor">
-            <h1>Login Usuario</h1>
-        <table width="100%" border ="1" id="div-login">
+        <div class="login-caja">
+      <img src="img/logo.png" class="avatar" alt="Avatar Image">
+            <h2>Cuenta Usuario</h2>
             <form method='get'>
-                <tr>
-                    <td width="678">Usuario</td>
-                    <td width="685"><label for ="txtUsuario"></label>
-                        <input type="text" name="txtUsuario" id="txtUsuario"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="678">Clave</td>
-                    <td width="685"><label for ="txtPass"></label>
-                        <input type="text" name="txtPass" id="txtPass"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" name="btnEnviar" value="Enviar"</td>
-                </tr>
+                <label for="username">Usuario</label>
+                <input type="text" name="txtUsuario" id="txtUsuario" placeholder="Ingrese Usuario"/>
+                   <label for="password">Contraseña</label>
+                   <input type="text" name="txtPass" id="txtPass" placeholder="Ingresa Contraseña"/>
+                   <input type="submit" name="btnEnviar" value="Enviar"/>
+                   <a href="#">Recuperar Contraseña</a><br>
+                   <a href="#">Registrarse</a>
             </form>
-        </table>
             </div>
         <%
             }
@@ -54,7 +44,7 @@
                 {
                     session.setAttribute("logeo", "si");
         %>
-                   <table width="100%" border ="1">
+                   <table  border ="4">
                          <tr>
                             <td><h1>Bienvenido</h1></td>
                         </tr>
@@ -66,7 +56,11 @@
                         </tr>
                      </table>
         <%
-                }
+                }else{
+%>
+<h1>Usuario o contraseña Incorrectos</h1>
+<%
+}
             }
         %>
     </body>

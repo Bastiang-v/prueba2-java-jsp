@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
         <link rel="stylesheet" href="css/cssindex.css"/>
-        <title>Consulta Usuarios</title>
+        <title>Consulta Usuario</title>
     </head>
     <body>
         <h1>Consulta Usuario</h1>

@@ -1,54 +1,150 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 06-09-2018, 23:48:46
-    Author     : Bastian
-*/
-body{
-    background: rgba(96, 209, 96, 0.76);
-}
 h1{
-    padding: 3%;
     text-align: center;
+    text-shadow: 10px 10px 10px #FF1F1F;
     color: white;
-    text-shadow: 0 0 10px #FFFFFF, 2px 2px 0px rgba(28,110,164,0.01);
+    font-size: 80px;
+    margin: 1%;
 }
-#contenedor{
-    color: black;
-    border: 2px solid rgb(11, 71, 24);
-    padding: 10%;
-    border-radius: 0px 0px 30px 40px;
-    max-width: 250px;
-    margin: auto;
-    display: block;
-width:100%;
-}
-#div-login{
-    margin: auto; 
-   text-align: center;
-    border: 2px solid rgb(14, 8, 8);
-}
-table,tr,td{
-    align-content: center;
-    font-size: 20px;
-    margin: auto;
+h2{
     text-align: center;
-    border: 5px solid rgb(255, 255, 255);
-    padding: auto;
+    text-shadow: 10px 10px 10px #FF1F1F;
+    color: white;
 }
-footer,li{
-    list-style: none;
+body {
+  margin: 0;
+  padding: 0;
+  background: url(../img/fondo.jpg) no-repeat center top;
+  background-size: cover;
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+.login-caja {
+  width: 320px;
+  height: 420px;
+  background: #000;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+  padding-top: 50px;
+}
+
+.login-caja .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+
+.login-caja h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.login-caja label {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  display: block;
+}
+
+.login-caja input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.login-caja input[type="text"], .login-caja input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.login-caja input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #b80f22;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+.login-caja input[type="submit"]:hover {
+  cursor: pointer;
+  background: #ffc107;
+  color: #000;
+}
+
+.login-caja a {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 20px;
+  color: darkgrey;
+}
+
+.login-caja a:hover {
+  color: #fff;
+}
+footer{
+        text-align: center;
+        font-family: sans-serif;
+        color: whitesmoke;
+        width: 100%;
+        bottom: 0;
+        position:fixed;
+    }
+    footer a,li,ul{
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  display: inline;
+  width: 100%;
+  font-size: 30px;
+  padding: 10px;
+    }
+    a:hover{
+    text-shadow: 10px 10px 10px #FF1F1F;
+    }
+    table{
+        margin: 0 auto;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+    }
+    a{
+        list-style: none;
+        color: white;
+        font-size: 30px;
+    }
+    option{
+        font-size: 25px;
+    }
+    td,input,select{
+        font-size: 20px;
+    }
+    #btnEnviar{
+        background: #f44336;
+         border: none;
+    color: white;
+    padding: 15px 30px;
     text-align: center;
-    display: inline;
-    padding: 10px;
-    margin: auto;
-}
-a{
-    color: black;
-}
-
-
-
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+    #btnEnviar:hover{
+          box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }

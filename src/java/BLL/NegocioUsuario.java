@@ -46,8 +46,8 @@ public class NegocioUsuario {
     {
         Statement t = conectar.crearSentencia();
         try{
-             int resultado = t.executeUpdate("insert into usuario (nombre,apellido,id_tipousuario) "
-                + "values('"+usuario.getNombre()+"','"+usuario.getApellido()+"','"+usuario.getTipo()+"')");
+             int resultado = t.executeUpdate("insert into usuario (nombre,apellido,contraseña,estado,id_tipousuario) "
+                + "values('"+usuario.getNombre()+"','"+usuario.getApellido()+"',md5('"+usuario.getContraseña()+"'),1,'"+usuario.getTipo()+"')");
         }catch( Exception ex)
         {
             JOptionPane.showMessageDialog(null, "error de comando consulta SELECT"+ ex.getMessage());

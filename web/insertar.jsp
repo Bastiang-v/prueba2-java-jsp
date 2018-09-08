@@ -10,10 +10,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Insertar</title>
+          <link rel="stylesheet" href="css/cssindex.css"/>
+        <title>Ingresar Usuario</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Ingresar Usuario</h1>
         <%
         if( session.getAttribute("logeo")=="si")
         {
@@ -21,7 +22,7 @@
                     request.getParameter("txtApellido")==null)
             {
         %>
-        <table width="518" border="1">
+        <table  width="700" border="3">
             <form method="post" action="">
                 <tr>
                     <td>Nombre:</td> 
@@ -36,6 +37,12 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>Contraseña:</td>
+                    <td>    
+                        <input type="password" name="txtPass" id="txtPass">
+                    </td>
+                </tr>
+                <tr>
                     <td>Tipo Usuario:</td>
                     <td>    
                         <select name="id_tipousuario">
@@ -47,7 +54,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Enviar</td>
+                    <td></td>
                     <td>    
                         <input type="submit" name="btnEnviar" id="btnEnviar" value="Enviar">
                     </td>
@@ -63,7 +70,14 @@
                 auxUsuario.setNombre(request.getParameter("txtNombre"));
                 auxUsuario.setApellido(request.getParameter("txtApellido"));
                 auxUsuario.setTipo(request.getParameter("id_tipousuario"));
+                auxUsuario.setContraseña(request.getParameter("txtPass"));
                 auxNego.InsertarUsuario(auxUsuario);
+                %>
+                <h1>Registro Insertado</h1>
+    <center>
+                <a href="index.jsp">Regresar</a>
+                </center>
+                <%
             }
         }
         else
