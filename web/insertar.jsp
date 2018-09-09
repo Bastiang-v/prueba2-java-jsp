@@ -22,45 +22,19 @@
                     request.getParameter("txtApellido")==null)
             {
         %>
-        <table  width="700" border="3">
-            <form method="post" action="">
-                <tr>
-                    <td>Nombre:</td> 
-                    <td>    
-                        <input type="text" name="txtNombre" id="txtNombre">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Apellido:</td>
-                    <td>    
-                       <input type="text" name="txtApellido" id="txtApellido">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Contraseña:</td>
-                    <td>    
-                        <input type="password" name="txtPass" id="txtPass">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Tipo Usuario:</td>
-                    <td>    
+        <div class="insertar">
+                        <input type="text" name="txtNombre" id="txtNombre" placeholder="Nombre">
+                      
+                       <input type="text" name="txtApellido" id="txtApellido" placeholder="Apellido">
+                        <input type="password" name="txtPass" id="txtPass" placeholder="Contraseña">
                         <select name="id_tipousuario">
                             <option value="1">Docente</option>
                             <option value="2">Estudiante</option>
                             <option value="3">Administrativo</option>
                             <option value="4">Seguridad</option>
                         </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>    
-                        <input type="submit" name="btnEnviar" id="btnEnviar" value="Enviar">
-                    </td>
-                </tr>
-            </form> 
-        </table>
+                        <button type="submit" name="btnEnviar" id="btnEnviar" value="Enviar">Enviar</button>
+                        </div>
         <%
             }
             else

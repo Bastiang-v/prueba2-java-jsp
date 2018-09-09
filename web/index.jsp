@@ -58,17 +58,11 @@
                 {
                     session.setAttribute("logeo", "si");
         %>
-                   <table  border ="4">
-                         <tr>
-                            <td><h1>Bienvenido</h1></td>
-                        </tr>
-                        <tr>
-                            <td><a href="consulta.jsp">Consulta cliente</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="insertar.jsp">Insertar cliente</a></td>
-                        </tr>
-                     </table>
+        <div class="menu">
+                            <h1>Bienvenido</h1>
+                           <a href="consulta.jsp">Consulta Usuario</a>
+                           <a href="insertar.jsp">Insertar Usuario</a>
+                           </div>
         <%
                 }else{
 %>
