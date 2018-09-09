@@ -46,19 +46,6 @@
                 </form>
             </div>
         </div>
-        <%--  <div class="login-caja">
-      <img src="img/logo.png" class="avatar" alt="Avatar Image">
-            <h2>Cuenta Usuario</h2>
-            <form method='get'>
-                <label for="username">Usuario</label>
-                <input type="text" name="txtUsuario" id="txtUsuario" placeholder="Ingrese Usuario"/>
-                   <label for="password">Contraseña</label>
-                   <input type="text" name="txtPass" id="txtPass" placeholder="Ingresa Contraseña"/>
-                   <input type="submit" name="btnEnviar" value="Enviar"/>
-                   <a href="#">Recuperar Contraseña</a><br>
-                   <a href="#">Registrarse</a>
-            </form>
-</div>--%>
         <%
             }
             else
