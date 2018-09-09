@@ -18,16 +18,16 @@
             if(request.getParameter("txtUsuario")==null)
             {
         %>
-        <div class="wrapper">
+        <div class="contenedor">
             <div class="nav">
-                <div class="left">
+                <div class="izquierda">
                     <ul>
                         <li><a href="#">Inicio</a></li>
                         <li><a href="#">Projectos</a></li>
                         <li><a href="#">Contacto</a></li>
                     </ul>
                 </div>
-                 <div class="right">
+                 <div class="derecho">
                     <ul>
                         <li><a href="#">Ingresar</a></li>
                         <li><a href="#">Registro</a></li>
