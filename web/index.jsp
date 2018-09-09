@@ -13,13 +13,40 @@
         <title>Desarrollo web</title>
     </head>
     <body>
-        <h1>Desarrollo Web 1</h1>
         <% 
             session.setAttribute("logeo", null);
             if(request.getParameter("txtUsuario")==null)
             {
         %>
-        <div class="login-caja">
+        <div class="wrapper">
+            <div class="nav">
+                <div class="left">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Projectos</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                 <div class="right">
+                    <ul>
+                        <li><a href="#">Ingresar</a></li>
+                        <li><a href="#">Registro</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header">
+                <h1>Desarrollo Web 1</h1>
+                <p>Programacion Java EE: Servlets y JavaServer Pages (JSP) IpChile</p>
+            </div>
+            <div class="form">
+                <form method="get">
+                     <input type="text" name="txtUsuario" id="txtUsuario" placeholder="Usuario"/>
+                    <input type="text" name="txtPass" id="txtPass" placeholder="Contraseña"/>
+                     <button type="submit" name="btnEnviar">Ingresar</button>
+                </form>
+            </div>
+        </div>
+        <%--  <div class="login-caja">
       <img src="img/logo.png" class="avatar" alt="Avatar Image">
             <h2>Cuenta Usuario</h2>
             <form method='get'>
@@ -31,7 +58,7 @@
                    <a href="#">Recuperar Contraseña</a><br>
                    <a href="#">Registrarse</a>
             </form>
-            </div>
+</div>--%>
         <%
             }
             else
@@ -64,12 +91,4 @@
             }
         %>
     </body>
-    <footer>
-        <ul>
-            <li><a href="">Inicio</a></li>
-            <li><a href="http://www.ipchile.cl/">Pagina Instituto</a></li>
-            <li><a href="">Pagina de prueba </a></li>
-        </ul>
-    </footer>
-    
 </html>
