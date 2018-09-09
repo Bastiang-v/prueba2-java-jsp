@@ -119,6 +119,7 @@ td{
 h1{
     text-align: center;
      color: #fff;
+    text-shadow: 0 0 10px #FFFFFF, 2px 2px 0px rgba(28,110,164,0.01);
 }
 a{
     text-decoration: none;

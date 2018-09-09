@@ -4,7 +4,7 @@
     Author     : Docente
 --%>
 
-<%@page import="BLL.NegocioUsuario"%>
+<%@page import="BLL.NegocioUsuario"%>sss
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -23,8 +23,8 @@
             {
         %>
         <div class="insertar">
-                        <input type="text" name="txtNombre" id="txtNombre" placeholder="Nombre">
-                      
+            <form method="get">
+            <input type="text" name="txtNombre" id="txtNombre" placeholder="Nombre">
                        <input type="text" name="txtApellido" id="txtApellido" placeholder="Apellido">
                         <input type="password" name="txtPass" id="txtPass" placeholder="Contraseña">
                         <select name="id_tipousuario">
@@ -34,6 +34,7 @@
                             <option value="4">Seguridad</option>
                         </select>
                         <button type="submit" name="btnEnviar" id="btnEnviar" value="Enviar">Enviar</button>
+                        </form>
                         </div>
         <%
             }
@@ -48,9 +49,6 @@
                 auxNego.InsertarUsuario(auxUsuario);
                 %>
                 <h1>Registro Insertado</h1>
-    <center>
-                <a href="index.jsp">Regresar</a>
-                </center>
                 <%
             }
         }
