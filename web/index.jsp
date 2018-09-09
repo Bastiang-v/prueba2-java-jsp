@@ -36,7 +36,7 @@
             </div>
             <div class="header">
                 <h1>Desarrollo Web 1</h1>
-                <p>Programacion Java EE: Servlets y JavaServer Pages (JSP) IpChile</p>
+                <p>Programacion Java EE: Servlets y JavaServer Pages (JSP) IpChile San Joaquin</p>
             </div>
             <div class="form">
                 <form method="get">
