@@ -15,17 +15,20 @@
     </head>
     <body>
         <h1>Consulta Usuario</h1>
+           <div class="footer">
+                <p>Copyright 2018</p>
+            </div>
         <%
         if( session.getAttribute("logeo")=="si"){    
-        BLL.NegocioUsuario auxNego = new BLL.NegocioUsuario();
+        BGBLL.BGNegocioUsuario auxNego = new BGBLL.BGNegocioUsuario();
         out.println("<table border=\"1\"><tr><td>Código</td><td>Nombre</td><td>Apellido</td><td>Tipo</td>");
         
         java.util.Iterator iter = auxNego.getCliente().iterator();
         
         while(iter.hasNext())
         {
-            DTO.Usuario auxUsuarios = new DTO.Usuario();
-            auxUsuarios = (DTO.Usuario) iter.next();
+            BGDTO.BGUsuario auxUsuarios = new BGDTO.BGUsuario();
+            auxUsuarios = (BGDTO.BGUsuario) iter.next();
             
             out.println("<tr>");
             out.println("<td>" + auxUsuarios.getId()+ "</td>");

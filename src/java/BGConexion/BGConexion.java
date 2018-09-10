@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Conexion;
+package BGConexion;
 
 //import com.mysql.jdbc.Connection;
 import java.sql.*;
@@ -13,9 +13,9 @@ import javax.swing.JOptionPane;
  *
  * @author educacion
  */
-public class Conexion {
+public class BGConexion {
        Connection conn;
-   public Conexion(String baseDatos)
+   public BGConexion(String baseDatos)
    {
        verificar();
        conectarse(baseDatos);

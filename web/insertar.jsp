@@ -4,7 +4,7 @@
     Author     : Docente
 --%>
 
-<%@page import="BLL.NegocioUsuario"%>sss
+<%@page import="BGBLL.BGNegocioUsuario"%>sss
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,6 +15,9 @@
     </head>
     <body>
         <h1>Ingresar Usuario</h1>
+        <div class="footer">
+                <p>Copyright 2018</p>
+            </div>
         <%
         if( session.getAttribute("logeo")=="si")
         {
@@ -40,8 +43,8 @@
             }
             else
             {
-                BLL.NegocioUsuario auxNego = new BLL.NegocioUsuario();
-                DTO.Usuario auxUsuario = new DTO.Usuario();
+                BGBLL.BGNegocioUsuario auxNego = new BGBLL.BGNegocioUsuario();
+                BGDTO.BGUsuario auxUsuario = new BGDTO.BGUsuario();
                 auxUsuario.setNombre(request.getParameter("txtNombre"));
                 auxUsuario.setApellido(request.getParameter("txtApellido"));
                 auxUsuario.setTipo(request.getParameter("id_tipousuario"));

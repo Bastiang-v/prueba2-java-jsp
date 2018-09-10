@@ -1,5 +1,5 @@
-package DTO;
-public class Usuario {
+package BGDTO;
+public class BGUsuario {
     private int id;
     private String nombre;
     private String apellido;
@@ -7,7 +7,7 @@ public class Usuario {
     private String contraseña;
     private int estado;
 
-    public Usuario()
+    public BGUsuario()
     {
     }
     /**

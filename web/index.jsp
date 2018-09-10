@@ -13,6 +13,9 @@
         <title>Desarrollo web</title>
     </head>
     <body>
+        <div class="footer">
+                <p>Copyright 2018</p>
+            </div>
         <% 
             session.setAttribute("logeo", null);
             if(request.getParameter("txtUsuario")==null)
@@ -50,8 +53,8 @@
             }
             else
             {
-               BLL.NegocioUsuario auxNego = new BLL.NegocioUsuario();
-               DTO.Usuario usuario = new DTO.Usuario();
+               BGBLL.BGNegocioUsuario auxNego = new BGBLL.BGNegocioUsuario();
+               BGDTO.BGUsuario usuario = new BGDTO.BGUsuario();
                usuario.setNombre(request.getParameter("txtUsuario"));
                usuario.setContraseña(request.getParameter("txtPass"));
                 if(auxNego.LoginUsuario(usuario).getEstado()==1)
@@ -72,4 +75,5 @@
             }
         %>
     </body>
+   
 </html>

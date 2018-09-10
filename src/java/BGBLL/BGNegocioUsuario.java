@@ -1,20 +1,20 @@
-package BLL;
+package BGBLL;
 
-import Conexion.*;
-import DTO.*;
+import BGDTO.BGUsuario;
+import BGConexion.BGConexion;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.*;
 import javax.swing.JOptionPane;
 
-public class NegocioUsuario {
+public class BGNegocioUsuario {
     
-    Conexion conectar;
+    BGConexion conectar;
     
-    public NegocioUsuario()
+    public BGNegocioUsuario()
     {
-        conectar = new Conexion("desarrolloweb1");
+        conectar = new BGConexion("desarrolloweb1");
         
     }
     
@@ -28,7 +28,7 @@ public class NegocioUsuario {
          resultado = t.executeQuery("SELECT * from usuario");
               while(resultado.next())
             {
-                Usuario auxUsuario = new Usuario();
+                BGUsuario auxUsuario = new BGUsuario();
                 auxUsuario.setId(resultado.getInt("id_usuario"));
                 auxUsuario.setNombre(resultado.getString("nombre"));
                 auxUsuario.setApellido(resultado.getString("apellido"));
@@ -42,7 +42,7 @@ public class NegocioUsuario {
         }
         return auxListaCliente;
     }
-    public void InsertarUsuario(Usuario usuario)
+    public void InsertarUsuario(BGUsuario usuario)
     {
         Statement t = conectar.crearSentencia();
         try{
@@ -56,12 +56,12 @@ public class NegocioUsuario {
           
    
 }
-    public Usuario LoginUsuario(Usuario usuario) {
+    public BGUsuario LoginUsuario(BGUsuario usuario) {
         Statement t = conectar.crearSentencia();
         ResultSet resultado = null;
         try
         {
-            Usuario us = new Usuario();
+            BGUsuario us = new BGUsuario();
             resultado = t.executeQuery("select * from usuario where nombre='"+usuario.getNombre()+"' and contraseña=md5('"+usuario.getContraseña()+"')");
             while(resultado.next())
             {
